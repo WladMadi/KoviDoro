@@ -140,6 +140,12 @@ class ViewController: UIViewController {
                 print("Fatal error")
             }
         }
+        
+        if segue.identifier == "FromMainToTaskVC" {
+            let indexPath = tableView.indexPathForSelectedRow
+            let destVC = segue.destination as! TaskViewController
+            destVC.currentTask = importantTasks[indexPath!.row]
+        }
     }
 }
 
@@ -217,7 +223,32 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         performSegue(withIdentifier: "FromMainToTaskVC", sender: nil)
     }
     
-
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        //Кнопка, которая удаляет ячейку и данные из базы
+        let deleteAction = UIContextualAction(style: .destructive, title: "Удалить") { (_, _, completion) in
+            
+            
+            self.realmManager.removeFromDB(object: self.importantTasks[indexPath.row])
+            self.importantTasks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            completion(true)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+        
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let enjoyAction = UIContextualAction(style: .normal, title: "Выполнена") { (_, _, completion) in
+            try! realm.write {
+                self.importantTasks[indexPath.row].isEnjoy = true
+            }
+            completion(true)
+        }
+        return UISwipeActionsConfiguration(actions: [enjoyAction])
+    }
     
 }
 
