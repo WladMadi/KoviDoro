@@ -13,7 +13,6 @@ class TaskBigCell: UITableViewCell {
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var taskNameLabel: UILabel!
     @IBOutlet weak var typeImageView: UIImageView!
-    @IBOutlet weak var isEnjoySwitch: UISwitch!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var dateLabel: UILabel!
 

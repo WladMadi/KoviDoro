@@ -7,26 +7,59 @@
 //
 
 import UIKit
+import RealmSwift
 
 class TaskViewController: UIViewController {
+    
+    var currentTask: Task?
 
     @IBOutlet weak var taskNameLabel: UILabel!
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var roundLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configVC()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func configVC() {
+        taskNameLabel.text = currentTask?.name
+        switch currentTask?.type {
+        case "YesYes":
+            iconImageView.image = #imageLiteral(resourceName: "YesYes")
+        case "YesNo":
+            iconImageView.image = #imageLiteral(resourceName: "YesNo")
+        case "NoYes":
+            iconImageView.image = #imageLiteral(resourceName: "NoYes")
+        case "NoNo":
+            iconImageView.image = #imageLiteral(resourceName: "NoNo")
+        default:
+            print ("Error")
+        }
+        
+        descriptionTextView.text = currentTask?.descript
+        
     }
-    */
+    
+    
+    
+    @IBAction func quitAction(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func enjoyAction(_ sender: UIButton) {
+        
+        try! realm.write {
+            currentTask?.isEnjoy = true
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
 
 }

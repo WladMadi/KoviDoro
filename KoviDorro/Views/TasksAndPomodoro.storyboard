@@ -52,16 +52,11 @@
                                                                             <rect key="frame" x="0.0" y="28" width="274" height="41"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.01.2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYP-Hx-5IH">
-                                                                                    <rect key="frame" x="0.0" y="10.5" width="225" height="20.5"/>
+                                                                                    <rect key="frame" x="0.0" y="10.5" width="274" height="20.5"/>
                                                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DNO-I3-pCO">
-                                                                                    <rect key="frame" x="225" y="5" width="51" height="31"/>
-                                                                                    <color key="onTintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                    <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                </switch>
                                                                             </subviews>
                                                                         </stackView>
                                                                     </subviews>
@@ -105,7 +100,6 @@
                                             <outlet property="cardView" destination="HHX-CM-lYv" id="hFP-UE-Mnt"/>
                                             <outlet property="dateLabel" destination="uYP-Hx-5IH" id="xUQ-EF-9ks"/>
                                             <outlet property="descriptionTextView" destination="2ww-6i-OJY" id="kAJ-lm-hoZ"/>
-                                            <outlet property="isEnjoySwitch" destination="DNO-I3-pCO" id="qbe-WG-ipr"/>
                                             <outlet property="taskNameLabel" destination="4iB-bb-zB0" id="6uO-RD-oZn"/>
                                             <outlet property="typeImageView" destination="Mwj-qB-inJ" id="Hqh-jw-N5b"/>
                                         </connections>
@@ -150,7 +144,7 @@
                     <connections>
                         <outlet property="tableView" destination="SaP-nV-IuX" id="Z62-7V-l6a"/>
                         <outlet property="tasksTypeLabel" destination="nJD-kN-dsg" id="fnw-r5-bah"/>
-                        <segue destination="aQ8-0J-YoQ" kind="show" id="LiS-sb-pGe"/>
+                        <segue destination="aQ8-0J-YoQ" kind="show" identifier="FromListToTask" id="ehe-bl-daT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FmV-DP-Lua" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -185,7 +179,7 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wdB-HO-upd">
                                 <rect key="frame" x="20" y="542.5" width="374" height="226.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Очень нужно прям взять и забить чертов болт в ванной, чтобы стало хорошо хорошо хорошо, тепло и мухи чтобы не кусали, и Россия нищая Россия! Мне избы серые твои... Страна рабов страна господ. Мороз и солнце день чудесный Татьяна рано утром встала</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -195,6 +189,9 @@
                                 <rect key="frame" x="151" y="797" width="112" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="ГОТОВО!"/>
+                                <connections>
+                                    <action selector="enjoyAction:" destination="aQ8-0J-YoQ" eventType="touchUpInside" id="oWY-Xo-F05"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 круг" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1h-0q-hcc">
                                 <rect key="frame" x="181" y="391.5" width="72.5" height="33"/>
@@ -207,6 +204,9 @@
                                 <state key="normal" title="Выйти">
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="quitAction:" destination="aQ8-0J-YoQ" eventType="touchUpInside" id="z51-BY-wgA"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YesYes" translatesAutoresizingMaskIntoConstraints="NO" id="cnj-2v-w60">
                                 <rect key="frame" x="13" y="82" width="62" height="62"/>
@@ -216,7 +216,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.90100633603960856" green="1" blue="0.88530435758061965" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="P1h-0q-hcc" firstAttribute="top" secondItem="nnQ-X3-GxZ" secondAttribute="bottom" constant="8" id="2wR-jB-efw"/>
                             <constraint firstItem="Ny5-FW-3FV" firstAttribute="centerY" secondItem="cnj-2v-w60" secondAttribute="centerY" id="4JO-R6-RO6"/>
@@ -243,7 +243,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="eKe-JQ-hXs"/>
                     <connections>
+                        <outlet property="descriptionTextView" destination="wdB-HO-upd" id="3i6-Kh-OXy"/>
+                        <outlet property="iconImageView" destination="cnj-2v-w60" id="rBX-cT-3SH"/>
+                        <outlet property="roundLabel" destination="P1h-0q-hcc" id="94o-tn-i4X"/>
                         <outlet property="taskNameLabel" destination="Ny5-FW-3FV" id="vox-x1-hVS"/>
+                        <outlet property="timerLabel" destination="nnQ-X3-GxZ" id="aDT-Pe-EV5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H9A-lD-6eq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

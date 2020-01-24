@@ -23,6 +23,7 @@ class TaskListViewController: UIViewController {
 
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView = UIView()
         tasks = realm.objects(Task.self)
         configureVC()
     }
@@ -75,6 +76,16 @@ class TaskListViewController: UIViewController {
     }
     
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "FromListToTask" {
+            let indexPath = tableView.indexPathForSelectedRow
+            let destVC = segue.destination as! TaskViewController
+            destVC.currentTask = taskList[indexPath!.row]
+
+
+        }
+    }
+
     
 
 }
@@ -115,6 +126,10 @@ extension TaskListViewController: UITableViewDelegate, UITableViewDataSource {
         
         return UISwipeActionsConfiguration(actions: [deleteAction])
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "FromListToTask", sender: nil)
     }
     
 }
