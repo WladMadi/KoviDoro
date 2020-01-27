@@ -10,6 +10,9 @@
 		7B6F35D523CF7B5B0022D3CD /* MainContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F35D423CF7B5B0022D3CD /* MainContainerViewController.swift */; };
 		7B6F35D723CF7B6B0022D3CD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F35D623CF7B6B0022D3CD /* MenuViewController.swift */; };
 		7B6F35D923CF8C240022D3CD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F35D823CF8C240022D3CD /* SettingsViewController.swift */; };
+		7BA6DE1523DF4B1E0063F350 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6DE1423DF4B1E0063F350 /* NotificationType.swift */; };
+		7BA6DE1723DF581B0063F350 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6DE1623DF581B0063F350 /* Notifications.swift */; };
+		7BA6DE1923DF5D480063F350 /* favicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BA6DE1823DF5D480063F350 /* favicon.png */; };
 		7BB015CB23CCD7C5001CCA04 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB015CA23CCD7C5001CCA04 /* MainCell.swift */; };
 		7BB015CF23CCDC71001CCA04 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB015CE23CCDC71001CCA04 /* TaskList.swift */; };
 		7BB015D123CCE7B8001CCA04 /* NewTaskPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB015D023CCE7B8001CCA04 /* NewTaskPopoverViewController.swift */; };
@@ -37,6 +40,9 @@
 		7B6F35D423CF7B5B0022D3CD /* MainContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerViewController.swift; sourceTree = "<group>"; };
 		7B6F35D623CF7B6B0022D3CD /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		7B6F35D823CF8C240022D3CD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7BA6DE1423DF4B1E0063F350 /* NotificationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
+		7BA6DE1623DF581B0063F350 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		7BA6DE1823DF5D480063F350 /* favicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favicon.png; sourceTree = "<group>"; };
 		7BB015CA23CCD7C5001CCA04 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		7BB015CE23CCDC71001CCA04 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 		7BB015D023CCE7B8001CCA04 /* NewTaskPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskPopoverViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 				7BB015CE23CCDC71001CCA04 /* TaskList.swift */,
 				7BBF346723D70FAF003E411A /* Task.swift */,
 				7BBF346923D7135E003E411A /* SettingsPomodoro.swift */,
+				7BA6DE1423DF4B1E0063F350 /* NotificationType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -121,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				7BBF346B23D7140C003E411A /* RealmManager.swift */,
+				7BA6DE1623DF581B0063F350 /* Notifications.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -148,6 +156,7 @@
 			children = (
 				7BC308B723BA650900E86070 /* AppDelegate.swift */,
 				7BC308B923BA650900E86070 /* SceneDelegate.swift */,
+				7BA6DE1823DF5D480063F350 /* favicon.png */,
 				7BBF345E23D6F0AC003E411A /* Models */,
 				7BBF345F23D6F0CB003E411A /* Views */,
 				7BBF345D23D6F099003E411A /* Controllers */,
@@ -238,6 +247,7 @@
 			files = (
 				7BBF346223D6F1A9003E411A /* Main.storyboard in Resources */,
 				7BC308C423BA650C00E86070 /* LaunchScreen.storyboard in Resources */,
+				7BA6DE1923DF5D480063F350 /* favicon.png in Resources */,
 				7BC308C123BA650C00E86070 /* Assets.xcassets in Resources */,
 				7BC308CC23BA774A00E86070 /* TaskSmallCell.xib in Resources */,
 				7BBF345C23D6F03A003E411A /* TasksAndPomodoro.storyboard in Resources */,
@@ -305,10 +315,12 @@
 				7BC308B823BA650900E86070 /* AppDelegate.swift in Sources */,
 				7B6F35D723CF7B6B0022D3CD /* MenuViewController.swift in Sources */,
 				7BBF346823D70FAF003E411A /* Task.swift in Sources */,
+				7BA6DE1723DF581B0063F350 /* Notifications.swift in Sources */,
 				7BC308CF23BA776E00E86070 /* TaskSmallCell.swift in Sources */,
 				7BC308BA23BA650900E86070 /* SceneDelegate.swift in Sources */,
 				7BB015D123CCE7B8001CCA04 /* NewTaskPopoverViewController.swift in Sources */,
 				7BB015CB23CCD7C5001CCA04 /* MainCell.swift in Sources */,
+				7BA6DE1523DF4B1E0063F350 /* NotificationType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

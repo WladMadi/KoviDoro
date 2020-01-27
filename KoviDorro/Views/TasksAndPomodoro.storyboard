@@ -193,12 +193,6 @@
                                     <action selector="enjoyAction:" destination="aQ8-0J-YoQ" eventType="touchUpInside" id="oWY-Xo-F05"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 круг" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1h-0q-hcc">
-                                <rect key="frame" x="181" y="391.5" width="72.5" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNq-Z9-pDP">
                                 <rect key="frame" x="20" y="44" width="46" height="30"/>
                                 <state key="normal" title="Выйти">
@@ -215,10 +209,20 @@
                                     <constraint firstAttribute="width" secondItem="cnj-2v-w60" secondAttribute="height" multiplier="1:1" id="Smg-hA-n1y"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUy-7F-o67">
+                                <rect key="frame" x="159" y="722" width="96" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="СТАРТ!">
+                                    <color key="titleColor" red="0.47993552680000001" green="0.28447008130000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startAction:" destination="aQ8-0J-YoQ" eventType="touchUpInside" id="5Cn-X4-VnF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90100633603960856" green="1" blue="0.88530435758061965" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="P1h-0q-hcc" firstAttribute="top" secondItem="nnQ-X3-GxZ" secondAttribute="bottom" constant="8" id="2wR-jB-efw"/>
                             <constraint firstItem="Ny5-FW-3FV" firstAttribute="centerY" secondItem="cnj-2v-w60" secondAttribute="centerY" id="4JO-R6-RO6"/>
                             <constraint firstItem="eJH-pq-EG5" firstAttribute="leading" secondItem="q2L-Kl-lqw" secondAttribute="leading" constant="20" id="4hK-PA-ssP"/>
                             <constraint firstItem="wdB-HO-upd" firstAttribute="centerX" secondItem="q2L-Kl-lqw" secondAttribute="centerX" id="FdV-D1-RvZ"/>
@@ -232,7 +236,6 @@
                             <constraint firstItem="LNq-Z9-pDP" firstAttribute="top" secondItem="q2L-Kl-lqw" secondAttribute="top" id="Wuj-2x-yFG"/>
                             <constraint firstItem="eJH-pq-EG5" firstAttribute="centerX" secondItem="q2L-Kl-lqw" secondAttribute="centerX" id="ZpB-Lp-HY4"/>
                             <constraint firstItem="bG6-Q3-OjJ" firstAttribute="centerX" secondItem="q2L-Kl-lqw" secondAttribute="centerX" id="bvd-RP-esG"/>
-                            <constraint firstItem="P1h-0q-hcc" firstAttribute="centerX" secondItem="nnQ-X3-GxZ" secondAttribute="centerX" id="hWV-u5-VEH"/>
                             <constraint firstItem="Ny5-FW-3FV" firstAttribute="leading" secondItem="cnj-2v-w60" secondAttribute="trailing" constant="6" id="hvM-LA-y15"/>
                             <constraint firstItem="eJH-pq-EG5" firstAttribute="top" secondItem="Ny5-FW-3FV" secondAttribute="bottom" constant="5" id="sh3-Qw-odf"/>
                             <constraint firstItem="bG6-Q3-OjJ" firstAttribute="top" secondItem="wdB-HO-upd" secondAttribute="bottom" constant="28" id="u70-4w-EgO"/>
@@ -245,7 +248,6 @@
                     <connections>
                         <outlet property="descriptionTextView" destination="wdB-HO-upd" id="3i6-Kh-OXy"/>
                         <outlet property="iconImageView" destination="cnj-2v-w60" id="rBX-cT-3SH"/>
-                        <outlet property="roundLabel" destination="P1h-0q-hcc" id="94o-tn-i4X"/>
                         <outlet property="taskNameLabel" destination="Ny5-FW-3FV" id="vox-x1-hVS"/>
                         <outlet property="timerLabel" destination="nnQ-X3-GxZ" id="aDT-Pe-EV5"/>
                     </connections>

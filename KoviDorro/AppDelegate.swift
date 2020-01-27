@@ -8,13 +8,14 @@
 
 import UIKit
 import RealmSwift
+import UserNotifications
 
 var userSettings = SettingsPomodoro()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    let notifications = Notifications()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
                 let schemaVersion: UInt64 = 4
@@ -25,6 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
         })
         Realm.Configuration.defaultConfiguration = config
+        
+        notifications.requestAuthorization()
+        notifications.notificationCenter.delegate = notifications
+
         return true
     }
 
