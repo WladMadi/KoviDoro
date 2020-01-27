@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B6F35D523CF7B5B0022D3CD /* MainContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F35D423CF7B5B0022D3CD /* MainContainerViewController.swift */; };
+		7B6F35D723CF7B6B0022D3CD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F35D623CF7B6B0022D3CD /* MenuViewController.swift */; };
+		7B6F35D923CF8C240022D3CD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F35D823CF8C240022D3CD /* SettingsViewController.swift */; };
+		7BB015CB23CCD7C5001CCA04 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB015CA23CCD7C5001CCA04 /* MainCell.swift */; };
+		7BB015CF23CCDC71001CCA04 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB015CE23CCDC71001CCA04 /* TaskList.swift */; };
+		7BB015D123CCE7B8001CCA04 /* NewTaskPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB015D023CCE7B8001CCA04 /* NewTaskPopoverViewController.swift */; };
+		7BBF345C23D6F03A003E411A /* TasksAndPomodoro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BBF345B23D6F03A003E411A /* TasksAndPomodoro.storyboard */; };
+		7BBF346223D6F1A9003E411A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC308BD23BA650900E86070 /* Main.storyboard */; };
+		7BBF346423D700E8003E411A /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBF346323D700E8003E411A /* TaskListViewController.swift */; };
+		7BBF346623D702C7003E411A /* TaskBigCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBF346523D702C7003E411A /* TaskBigCell.swift */; };
+		7BBF346823D70FAF003E411A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBF346723D70FAF003E411A /* Task.swift */; };
+		7BBF346A23D7135E003E411A /* SettingsPomodoro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBF346923D7135E003E411A /* SettingsPomodoro.swift */; };
+		7BBF346C23D7140C003E411A /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBF346B23D7140C003E411A /* RealmManager.swift */; };
+		7BBF346F23D741E0003E411A /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBF346E23D741E0003E411A /* TaskViewController.swift */; };
+		7BC308B823BA650900E86070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC308B723BA650900E86070 /* AppDelegate.swift */; };
+		7BC308BA23BA650900E86070 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC308B923BA650900E86070 /* SceneDelegate.swift */; };
+		7BC308BC23BA650900E86070 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC308BB23BA650900E86070 /* ViewController.swift */; };
+		7BC308C123BA650C00E86070 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC308C023BA650C00E86070 /* Assets.xcassets */; };
+		7BC308C423BA650C00E86070 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC308C223BA650C00E86070 /* LaunchScreen.storyboard */; };
+		7BC308CC23BA774A00E86070 /* TaskSmallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC308CB23BA774A00E86070 /* TaskSmallCell.xib */; };
+		7BC308CF23BA776E00E86070 /* TaskSmallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC308CE23BA776E00E86070 /* TaskSmallCell.swift */; };
+		9753BCD32546A5A26173C284 /* Pods_KoviDorro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D98FEC7326B69AD71AF2FD5 /* Pods_KoviDorro.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2B3EDB0D3AC002751D5A82CD /* Pods-KoviDorro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoviDorro.debug.xcconfig"; path = "Target Support Files/Pods-KoviDorro/Pods-KoviDorro.debug.xcconfig"; sourceTree = "<group>"; };
+		55EDB72791F5D737C141B999 /* Pods-KoviDorro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoviDorro.release.xcconfig"; path = "Target Support Files/Pods-KoviDorro/Pods-KoviDorro.release.xcconfig"; sourceTree = "<group>"; };
+		7B6F35D423CF7B5B0022D3CD /* MainContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerViewController.swift; sourceTree = "<group>"; };
+		7B6F35D623CF7B6B0022D3CD /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		7B6F35D823CF8C240022D3CD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7BB015CA23CCD7C5001CCA04 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		7BB015CE23CCDC71001CCA04 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
+		7BB015D023CCE7B8001CCA04 /* NewTaskPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskPopoverViewController.swift; sourceTree = "<group>"; };
+		7BBF345B23D6F03A003E411A /* TasksAndPomodoro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TasksAndPomodoro.storyboard; sourceTree = "<group>"; };
+		7BBF346323D700E8003E411A /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		7BBF346523D702C7003E411A /* TaskBigCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskBigCell.swift; sourceTree = "<group>"; };
+		7BBF346723D70FAF003E411A /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		7BBF346923D7135E003E411A /* SettingsPomodoro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPomodoro.swift; sourceTree = "<group>"; };
+		7BBF346B23D7140C003E411A /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		7BBF346E23D741E0003E411A /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		7BC308B423BA650900E86070 /* KoviDorro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KoviDorro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BC308B723BA650900E86070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7BC308B923BA650900E86070 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7BC308BB23BA650900E86070 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7BC308BE23BA650900E86070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7BC308C023BA650C00E86070 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BC308C323BA650C00E86070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7BC308C523BA650C00E86070 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BC308CB23BA774A00E86070 /* TaskSmallCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskSmallCell.xib; sourceTree = "<group>"; };
+		7BC308CE23BA776E00E86070 /* TaskSmallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSmallCell.swift; sourceTree = "<group>"; };
+		9D98FEC7326B69AD71AF2FD5 /* Pods_KoviDorro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoviDorro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BC308B123BA650900E86070 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9753BCD32546A5A26173C284 /* Pods_KoviDorro.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		68C336258001389C74D93AD4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B3EDB0D3AC002751D5A82CD /* Pods-KoviDorro.debug.xcconfig */,
+				55EDB72791F5D737C141B999 /* Pods-KoviDorro.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7BBF345D23D6F099003E411A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7BC308BB23BA650900E86070 /* ViewController.swift */,
+				7B6F35D823CF8C240022D3CD /* SettingsViewController.swift */,
+				7B6F35D423CF7B5B0022D3CD /* MainContainerViewController.swift */,
+				7BBF346E23D741E0003E411A /* TaskViewController.swift */,
+				7B6F35D623CF7B6B0022D3CD /* MenuViewController.swift */,
+				7BB015D023CCE7B8001CCA04 /* NewTaskPopoverViewController.swift */,
+				7BBF346323D700E8003E411A /* TaskListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7BBF345E23D6F0AC003E411A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7BB015CE23CCDC71001CCA04 /* TaskList.swift */,
+				7BBF346723D70FAF003E411A /* Task.swift */,
+				7BBF346923D7135E003E411A /* SettingsPomodoro.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7BBF345F23D6F0CB003E411A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7BC308BD23BA650900E86070 /* Main.storyboard */,
+				7BBF345B23D6F03A003E411A /* TasksAndPomodoro.storyboard */,
+				7BB015CA23CCD7C5001CCA04 /* MainCell.swift */,
+				7BC308CD23BA775500E86070 /* TaskSmallCell */,
+				7BBF346523D702C7003E411A /* TaskBigCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7BBF346D23D71439003E411A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7BBF346B23D7140C003E411A /* RealmManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		7BC308AB23BA650900E86070 = {
+			isa = PBXGroup;
+			children = (
+				7BC308B623BA650900E86070 /* KoviDorro */,
+				7BC308B523BA650900E86070 /* Products */,
+				68C336258001389C74D93AD4 /* Pods */,
+				81453EEE52B141224DA8DBED /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7BC308B523BA650900E86070 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BC308B423BA650900E86070 /* KoviDorro.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BC308B623BA650900E86070 /* KoviDorro */ = {
+			isa = PBXGroup;
+			children = (
+				7BC308B723BA650900E86070 /* AppDelegate.swift */,
+				7BC308B923BA650900E86070 /* SceneDelegate.swift */,
+				7BBF345E23D6F0AC003E411A /* Models */,
+				7BBF345F23D6F0CB003E411A /* Views */,
+				7BBF345D23D6F099003E411A /* Controllers */,
+				7BBF346D23D71439003E411A /* Managers */,
+				7BC308C023BA650C00E86070 /* Assets.xcassets */,
+				7BC308C223BA650C00E86070 /* LaunchScreen.storyboard */,
+				7BC308C523BA650C00E86070 /* Info.plist */,
+			);
+			path = KoviDorro;
+			sourceTree = "<group>";
+		};
+		7BC308CD23BA775500E86070 /* TaskSmallCell */ = {
+			isa = PBXGroup;
+			children = (
+				7BC308CB23BA774A00E86070 /* TaskSmallCell.xib */,
+				7BC308CE23BA776E00E86070 /* TaskSmallCell.swift */,
+			);
+			path = TaskSmallCell;
+			sourceTree = "<group>";
+		};
+		81453EEE52B141224DA8DBED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D98FEC7326B69AD71AF2FD5 /* Pods_KoviDorro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BC308B323BA650900E86070 /* KoviDorro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BC308C823BA650C00E86070 /* Build configuration list for PBXNativeTarget "KoviDorro" */;
+			buildPhases = (
+				1EBDA2382EC0F9437DF09FC3 /* [CP] Check Pods Manifest.lock */,
+				7BC308B023BA650900E86070 /* Sources */,
+				7BC308B123BA650900E86070 /* Frameworks */,
+				7BC308B223BA650900E86070 /* Resources */,
+				F3EE4FE46CAD64220900B0C9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KoviDorro;
+			productName = KoviDorro;
+			productReference = 7BC308B423BA650900E86070 /* KoviDorro.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BC308AC23BA650900E86070 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Влад Мади";
+				TargetAttributes = {
+					7BC308B323BA650900E86070 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 7BC308AF23BA650900E86070 /* Build configuration list for PBXProject "KoviDorro" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7BC308AB23BA650900E86070;
+			productRefGroup = 7BC308B523BA650900E86070 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BC308B323BA650900E86070 /* KoviDorro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BC308B223BA650900E86070 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BBF346223D6F1A9003E411A /* Main.storyboard in Resources */,
+				7BC308C423BA650C00E86070 /* LaunchScreen.storyboard in Resources */,
+				7BC308C123BA650C00E86070 /* Assets.xcassets in Resources */,
+				7BC308CC23BA774A00E86070 /* TaskSmallCell.xib in Resources */,
+				7BBF345C23D6F03A003E411A /* TasksAndPomodoro.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EBDA2382EC0F9437DF09FC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KoviDorro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3EE4FE46CAD64220900B0C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoviDorro/Pods-KoviDorro-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KoviDorro/Pods-KoviDorro-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KoviDorro/Pods-KoviDorro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BC308B023BA650900E86070 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BB015CF23CCDC71001CCA04 /* TaskList.swift in Sources */,
+				7BBF346423D700E8003E411A /* TaskListViewController.swift in Sources */,
+				7BBF346C23D7140C003E411A /* RealmManager.swift in Sources */,
+				7B6F35D523CF7B5B0022D3CD /* MainContainerViewController.swift in Sources */,
+				7BC308BC23BA650900E86070 /* ViewController.swift in Sources */,
+				7BBF346F23D741E0003E411A /* TaskViewController.swift in Sources */,
+				7BBF346A23D7135E003E411A /* SettingsPomodoro.swift in Sources */,
+				7B6F35D923CF8C240022D3CD /* SettingsViewController.swift in Sources */,
+				7BBF346623D702C7003E411A /* TaskBigCell.swift in Sources */,
+				7BC308B823BA650900E86070 /* AppDelegate.swift in Sources */,
+				7B6F35D723CF7B6B0022D3CD /* MenuViewController.swift in Sources */,
+				7BBF346823D70FAF003E411A /* Task.swift in Sources */,
+				7BC308CF23BA776E00E86070 /* TaskSmallCell.swift in Sources */,
+				7BC308BA23BA650900E86070 /* SceneDelegate.swift in Sources */,
+				7BB015D123CCE7B8001CCA04 /* NewTaskPopoverViewController.swift in Sources */,
+				7BB015CB23CCD7C5001CCA04 /* MainCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7BC308BD23BA650900E86070 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BC308BE23BA650900E86070 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7BC308C223BA650C00E86070 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BC308C323BA650C00E86070 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7BC308C623BA650C00E86070 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7BC308C723BA650C00E86070 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7BC308C923BA650C00E86070 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B3EDB0D3AC002751D5A82CD /* Pods-KoviDorro.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V726A9G44T;
+				INFOPLIST_FILE = KoviDorro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.madWlad.KoviDorro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7BC308CA23BA650C00E86070 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55EDB72791F5D737C141B999 /* Pods-KoviDorro.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V726A9G44T;
+				INFOPLIST_FILE = KoviDorro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ru.madWlad.KoviDorro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BC308AF23BA650900E86070 /* Build configuration list for PBXProject "KoviDorro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BC308C623BA650C00E86070 /* Debug */,
+				7BC308C723BA650C00E86070 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BC308C823BA650C00E86070 /* Build configuration list for PBXNativeTarget "KoviDorro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BC308C923BA650C00E86070 /* Debug */,
+				7BC308CA23BA650C00E86070 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BC308AC23BA650900E86070 /* Project object */;
+}

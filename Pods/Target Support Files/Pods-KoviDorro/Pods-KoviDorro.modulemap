@@ -1,0 +1,6 @@
+framework module Pods_KoviDorro {
+  umbrella header "Pods-KoviDorro-umbrella.h"
+
+  export *
+  module * { export * }
+}
