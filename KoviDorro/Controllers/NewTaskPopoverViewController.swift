@@ -24,6 +24,7 @@ class NewTaskPopoverViewController: UIViewController {
     
     var delegate: NewTaskPopoverViewControllerDelegate?
 
+    var ids: Results<Task>!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = #colorLiteral(red: 0.597692536, green: 0.6235294342, blue: 0.1621292097, alpha: 1)
@@ -32,6 +33,12 @@ class NewTaskPopoverViewController: UIViewController {
         
 
         tasks = realm.objects(Task.self)
+        
+        ids = tasks.sorted(byKeyPath: "id")
+        
+        for task in ids {
+            print(task.id)
+        }
     }
     
     @IBAction func cancelAction(_ sender: Any) {
@@ -61,7 +68,7 @@ class NewTaskPopoverViewController: UIViewController {
         newTask.type = taskType
         
 
-        newTask.id = (tasks.last?.id ?? 0) + 1
+        newTask.id = (ids.last?.id ?? 0) + 1
         manager.addToDB(object: newTask)
         
         delegate?.updateTableView()

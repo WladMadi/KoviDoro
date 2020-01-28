@@ -107,12 +107,12 @@ class ViewController: UIViewController {
     func tableConfigure() {
         importantTasks = [Task]()
         for task in tasks {
-            if task.type == "YesYes"{
+            if task.type == "YesYes" && task.isEnjoy == false {
                 self.importantTasks.append(task)
             }
         }
         for task in tasks {
-            if task.type == "YesNo" {
+            if task.type == "YesNo" && task.isEnjoy == false  {
                 self.importantTasks.append(task)
             }
         }
