@@ -13,6 +13,7 @@
 		7BA6DE1523DF4B1E0063F350 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6DE1423DF4B1E0063F350 /* NotificationType.swift */; };
 		7BA6DE1723DF581B0063F350 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6DE1623DF581B0063F350 /* Notifications.swift */; };
 		7BA6DE1923DF5D480063F350 /* favicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BA6DE1823DF5D480063F350 /* favicon.png */; };
+		7BA6DE1B23E05A0B0063F350 /* HistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA6DE1A23E05A0B0063F350 /* HistoryTVC.swift */; };
 		7BB015CB23CCD7C5001CCA04 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB015CA23CCD7C5001CCA04 /* MainCell.swift */; };
 		7BB015CF23CCDC71001CCA04 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB015CE23CCDC71001CCA04 /* TaskList.swift */; };
 		7BB015D123CCE7B8001CCA04 /* NewTaskPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB015D023CCE7B8001CCA04 /* NewTaskPopoverViewController.swift */; };
@@ -43,6 +44,7 @@
 		7BA6DE1423DF4B1E0063F350 /* NotificationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationType.swift; sourceTree = "<group>"; };
 		7BA6DE1623DF581B0063F350 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		7BA6DE1823DF5D480063F350 /* favicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favicon.png; sourceTree = "<group>"; };
+		7BA6DE1A23E05A0B0063F350 /* HistoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTVC.swift; sourceTree = "<group>"; };
 		7BB015CA23CCD7C5001CCA04 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		7BB015CE23CCDC71001CCA04 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 		7BB015D023CCE7B8001CCA04 /* NewTaskPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskPopoverViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				7BC308BB23BA650900E86070 /* ViewController.swift */,
 				7B6F35D823CF8C240022D3CD /* SettingsViewController.swift */,
+				7BA6DE1A23E05A0B0063F350 /* HistoryTVC.swift */,
 				7B6F35D423CF7B5B0022D3CD /* MainContainerViewController.swift */,
 				7BBF346E23D741E0003E411A /* TaskViewController.swift */,
 				7B6F35D623CF7B6B0022D3CD /* MenuViewController.swift */,
@@ -309,6 +312,7 @@
 				7B6F35D523CF7B5B0022D3CD /* MainContainerViewController.swift in Sources */,
 				7BC308BC23BA650900E86070 /* ViewController.swift in Sources */,
 				7BBF346F23D741E0003E411A /* TaskViewController.swift in Sources */,
+				7BA6DE1B23E05A0B0063F350 /* HistoryTVC.swift in Sources */,
 				7BBF346A23D7135E003E411A /* SettingsPomodoro.swift in Sources */,
 				7B6F35D923CF8C240022D3CD /* SettingsViewController.swift in Sources */,
 				7BBF346623D702C7003E411A /* TaskBigCell.swift in Sources */,

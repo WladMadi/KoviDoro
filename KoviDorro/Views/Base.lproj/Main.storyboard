@@ -8,6 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--HistoryVC-->
+        <scene sceneID="B0a-uN-ovX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TasksAndPomodoro" referencedIdentifier="HistoryVC" id="0ge-Pg-8fk" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7gN-ii-5iB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E68-q6-S08" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-559" y="149"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="Puz-rP-isz">
             <objects>
@@ -16,9 +26,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="350" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnu-1S-Qwy">
-                                <rect key="frame" x="74" y="139" width="202" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGq-dn-QB9">
+                                <rect key="frame" x="30" y="201" width="135" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="История">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="historyAction:" destination="7f7-7t-Zye" eventType="touchUpInside" id="lmK-mT-UVG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnu-1S-Qwy">
+                                <rect key="frame" x="30" y="125" width="174" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Настройки">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -29,9 +48,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vnu-1S-Qwy" firstAttribute="leading" secondItem="pNE-tW-Pgy" secondAttribute="leading" constant="30" id="56c-hG-FtO"/>
+                            <constraint firstItem="vnu-1S-Qwy" firstAttribute="top" secondItem="pNE-tW-Pgy" secondAttribute="top" constant="81" id="5kq-7S-XLK"/>
+                            <constraint firstItem="eGq-dn-QB9" firstAttribute="top" secondItem="vnu-1S-Qwy" secondAttribute="bottom" constant="22" id="Wsu-Jv-bB4"/>
+                            <constraint firstItem="eGq-dn-QB9" firstAttribute="leading" secondItem="vnu-1S-Qwy" secondAttribute="leading" id="gL7-q7-IV0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pNE-tW-Pgy"/>
                     </view>
                     <size key="freeformSize" width="350" height="896"/>
+                    <connections>
+                        <segue destination="0ge-Pg-8fk" kind="show" identifier="FromMainToHistory" id="E8i-zF-1bI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xE3-3z-R5G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
