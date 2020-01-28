@@ -45,12 +45,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="wJi-4N-eyL">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wJi-4N-eyL">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrm-LX-cgf">
-                                <rect key="frame" x="20" y="54" width="64" height="64"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="25" y="54" width="64" height="64"/>
+                                <color key="backgroundColor" red="0.0" green="0.29671499784806388" blue="0.72492772577092512" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="ZGy-78-TGp"/>
                                     <constraint firstAttribute="width" constant="64" id="xuS-da-sof"/>
@@ -75,7 +76,7 @@
                                 <rect key="frame" x="20" y="594" width="374" height="258"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GWF-gN-kar">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GWF-gN-kar">
                                 <rect key="frame" x="20" y="128" width="374" height="374"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -95,11 +96,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="181" height="181"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="YesYes" translatesAutoresizingMaskIntoConstraints="NO" id="5mh-WX-3y8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="181" height="181"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="YesYes" translatesAutoresizingMaskIntoConstraints="NO" id="5mh-WX-3y8">
+                                                    <rect key="frame" x="5" y="5" width="171" height="171"/>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5mh-WX-3y8" firstAttribute="centerX" secondItem="fnF-LA-pvz" secondAttribute="centerX" id="YOp-D1-bza"/>
+                                                <constraint firstItem="5mh-WX-3y8" firstAttribute="centerY" secondItem="fnF-LA-pvz" secondAttribute="centerY" id="sgM-5N-j4I"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="181" height="181"/>
                                         <connections>
@@ -109,7 +113,7 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KoviDoro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9G-9C-Bfi">
-                                <rect key="frame" x="107" y="54" width="221" height="64"/>
+                                <rect key="frame" x="112" y="54" width="221" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="221" id="jCn-RU-ir2"/>
                                 </constraints>
@@ -127,8 +131,8 @@
                             <constraint firstItem="wJi-4N-eyL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="2lq-tc-5y8"/>
                             <constraint firstItem="GWF-gN-kar" firstAttribute="leading" secondItem="wJi-4N-eyL" secondAttribute="leading" constant="20" id="Ano-X9-YUy"/>
                             <constraint firstItem="KZB-m7-WRS" firstAttribute="top" secondItem="GWF-gN-kar" secondAttribute="bottom" constant="10" id="Bg4-hM-yyZ"/>
+                            <constraint firstItem="yrm-LX-cgf" firstAttribute="leading" secondItem="GWF-gN-kar" secondAttribute="leading" constant="5" id="DHu-XY-PMQ"/>
                             <constraint firstItem="U9G-9C-Bfi" firstAttribute="centerY" secondItem="yrm-LX-cgf" secondAttribute="centerY" id="GqZ-o8-jLb"/>
-                            <constraint firstItem="yrm-LX-cgf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Rey-7H-bfd"/>
                             <constraint firstItem="KZB-m7-WRS" firstAttribute="trailing" secondItem="GWF-gN-kar" secondAttribute="trailing" id="T0B-uL-ILi"/>
                             <constraint firstItem="xwe-5e-x3K" firstAttribute="top" secondItem="KZB-m7-WRS" secondAttribute="bottom" constant="8" id="UAm-A9-tbu"/>
                             <constraint firstItem="U9G-9C-Bfi" firstAttribute="height" secondItem="yrm-LX-cgf" secondAttribute="height" id="gOv-70-0Gb"/>
@@ -147,6 +151,7 @@
                     <navigationItem key="navigationItem" id="DrV-ze-iry"/>
                     <connections>
                         <outlet property="collectionView" destination="GWF-gN-kar" id="bON-WT-wGh"/>
+                        <outlet property="menuButton" destination="yrm-LX-cgf" id="PH5-TK-gzY"/>
                         <outlet property="newTaskButton" destination="KZB-m7-WRS" id="9Gx-LP-AgS"/>
                         <outlet property="tableView" destination="xwe-5e-x3K" id="uTW-jV-zi3"/>
                         <outlet property="timeView" destination="wJi-4N-eyL" id="Mvw-i5-U2K"/>
@@ -488,7 +493,6 @@
     </scenes>
     <resources>
         <image name="YesYes" width="162.66667175292969" height="162.33332824707031"/>
-        <image name="back" width="1024" height="1024"/>
         <image name="menu" width="43.333332061767578" height="32.666667938232422"/>
     </resources>
 </document>

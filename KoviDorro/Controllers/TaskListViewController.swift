@@ -35,7 +35,7 @@ class TaskListViewController: UIViewController {
             tasksTypeLabel.text = "Важно Срочно"
             typeImage = #imageLiteral(resourceName: "YesYes")
             for task in tasks {
-                if task.type == "YesYes"{
+                if task.type == "YesYes" && task.isEnjoy == false {
                     taskList.append(task)
                 }
             }
@@ -43,7 +43,7 @@ class TaskListViewController: UIViewController {
             typeImage = #imageLiteral(resourceName: "NoNo")
             tasksTypeLabel.text = "Неважно Несрочно"
             for task in tasks {
-                if task.type == "NoNo"{
+                if task.type == "NoNo" && task.isEnjoy == false {
                     taskList.append(task)
                 }
             }
@@ -51,7 +51,7 @@ class TaskListViewController: UIViewController {
             typeImage = #imageLiteral(resourceName: "YesNo")
             tasksTypeLabel.text = "Неважно Срочно"
             for task in tasks {
-                if task.type == "NoYes"{
+                if task.type == "NoYes" && task.isEnjoy == false {
                     taskList.append(task)
                 }
             }
@@ -59,7 +59,7 @@ class TaskListViewController: UIViewController {
             typeImage = #imageLiteral(resourceName: "NoYes")
             tasksTypeLabel.text = "Важно Несрочно"
             for task in tasks {
-                if task.type == "YesNo"{
+                if task.type == "YesNo" && task.isEnjoy == false {
                     taskList.append(task)
                 }
             }
@@ -126,6 +126,18 @@ extension TaskListViewController: UITableViewDelegate, UITableViewDataSource {
         
         return UISwipeActionsConfiguration(actions: [deleteAction])
         
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let enjoyAction = UIContextualAction(style: .normal, title: "Выполнена") { (_, _, completion) in
+            try! realm.write {
+                self.taskList[indexPath.row].isEnjoy = true
+            }
+            self.taskList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            completion(true)
+        }
+        return UISwipeActionsConfiguration(actions: [enjoyAction])
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

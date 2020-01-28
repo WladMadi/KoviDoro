@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var newTaskButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     var importantTasks = [Task]()
+    @IBOutlet weak var menuButton: UIButton!
     
     var tasks: Results<Task>!
     
@@ -41,7 +42,9 @@ class ViewController: UIViewController {
         newTaskButton.clipsToBounds = true
         setupGestures() //Установка жестов в контроллер
         tableViewConfig() //Установка конфигурации таблицы в контроллер
-        
+        menuButton.alpha = 0.7
+        menuButton.layer.cornerRadius = 20
+        menuButton.clipsToBounds = true
         
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         setSettings()
@@ -160,6 +163,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCell", for: indexPath) as! MainCell
         
+        cell.imageView.frame.size.width = cell.frame.size.width
+        cell.imageView.frame.size.height = cell.frame.size.width
+        
         switch indexPath.item {
         case 0:
             cell.imageView.image = UIImage(named: "YesYes")
@@ -178,7 +184,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: collectionView.frame.size.width / 2 - 10, height: collectionView.frame.size.height / 2 - 10)
+        return CGSize(width: collectionView.frame.size.width / 2.1, height: collectionView.frame.size.height / 2.1)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -245,6 +251,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             try! realm.write {
                 self.importantTasks[indexPath.row].isEnjoy = true
             }
+            self.importantTasks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
             completion(true)
         }
         return UISwipeActionsConfiguration(actions: [enjoyAction])
